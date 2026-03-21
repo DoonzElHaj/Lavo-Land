@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVOLAND - Contacts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(180deg, #56721D, #224e10);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      white-space: nowrap;
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .navbar .links a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .navbar .links a:hover {
+      text-decoration: underline;
+      color: rgb(223, 227, 222);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 10px 16px;
+        flex-wrap: wrap;
+      }
+
+      .navbar .logo {
+        font-size: 18px;
+      }
+
+      .navbar .links {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .navbar .links a {
+        white-space: normal;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: rgb(86, 114, 29);
+
+      background-image: url('lavo_pic_1.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #ffffff;
+
+      padding-top: 120px; /* space for navbar */
+      padding-bottom: 40px;
+    }
+
+    /* Overlay for readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.6);
+      z-index: 0;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Contact cards container */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .contact-card {
+      background-color: #ffffff;
+      border: 2px solid rgb(86, 114, 29);
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 300px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LAVOLAND</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="LAVO_Contacts.html">Contacts</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Love of Avocados</h1>
+    <div class="cards-container">
+      <div class="contact-card">
+        <h2>Said El Hajj</h2>
+        <p>Email: said.elhajj@example.com</p>
+        <p>Phone: +961 3 743 644</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Dr. Dima El Hajj</h2>
+        <p>Email: dima.elhajj@example.com</p>
+        <p>Phone: +961 70 976 500</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
