@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVOLAND - Our Avocados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(180deg, #56721D, #224e10);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 3;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .navbar .links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .navbar .links a:hover {
+      text-decoration: underline;
+      color: rgb(223, 227, 222);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-image: url('lavo_pic_1.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      flex-wrap: wrap;
+    }
+
+    /* Semi-transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 1;
+    }
+
+    /* Heading is part of background layer */
+    .hero-heading {
+      font-size: 42px;
+      margin: 0;
+      color: rgb(86, 114, 29);
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      text-align: center;
+      z-index: 0;
+    }
+
+    /* Foreground card */
+    .hero-card {
+      background-color: #ffffff;
+      border: 2px solid rgb(86, 114, 29);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 2;
+      margin: 20px;
+      text-decoration: none;
+      color: inherit;
+      width: 250px;
+    }
+
+    .hero-card h1 {
+      color: rgb(110, 111, 107);
+      margin: 10px 0;
+    }
+
+    .hero-card h2 {
+      color: rgb(86, 114, 29);
+      margin: 8px 0;
+    }
+
+    .hero-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+    }
+
+    /* Title Section */
+    .title {
+      font-size: 32px;
+      color: rgb(86, 114, 29);
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+      border-bottom: 2px solid rgb(86, 114, 29);
+      background-color: #fff;
+    }
+
+    /* Hero Text (centered) */
+    .hero-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+      color: rgb(110, 111, 107);
+    }
+    .hero-text h1 {
+      color: rgb(86, 114, 29);
+    }
+    .hero-text h2 {
+      color: rgb(110, 111, 107);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero-heading {
+        display: none;
+      }
+      .hero {
+        flex-direction: column;
+      }
+      .hero-text {
+        display: none; /* hide hero-text on mobile */
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-heading {
+        display: none;
+      }
+      .hero-text {
+        display: none; /* also hide on very small devices */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">LAVOLAND - Love of Avocados</div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="LAVO_Avocados.html">AVOCADOS</a>
+      <a href="LAVO_Farm.html">LAVOFARM</a>
+      <a href="LAVO_Equipment.html">EQUIPMENT</a>
+      <a href="LAVO_Contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="title"><strong>Our Avocados</strong></div>
+
+  <div class="hero-text"><h1><strong>Discover the Avocados of Lavoland</strong></h1></div>
+  <div class="hero-text"><h2>At <strong>Lavoland</strong>, our land is home to three distinctive avocado varieties: <strong>Lamb Hass, Ettinger,</strong>
+  and <strong>Fuerte</strong>. Each one has been selected for its unique qualities — from flavor and texture to
+  seasonality and adaptability — allowing us to offer an orchard that is both diverse and
+  intentional.</h2></div>
+
+  <section class="hero">
+    <a href="LAVO_Lamb_Hass.html" class="hero-card">
+      <h1><strong>Lamb Hass</strong></h1>
+      <h2><i>Creamy and Nutty</i></h2>
+      <h2><i>Click for More Information</i></h2>
+    </a>
+
+    <a href="LAVO_Ettinger.html" class="hero-card">
+      <h1><strong>Ettinger</strong></h1>
+      <h2><i>Fresh and Delicate</i></h2>
+      <h2><i>Click for More Information</i></h2>
+    </a>
+
+    <a href="LAVO_Fuerte.html" class="hero-card">
+      <h1><strong>Fuerte</strong></h1>
+      <h2><i>Rich and Authentic</i></h2>
+      <h2><i>Click for More Information</i></h2>
+    </a>
+  </section>
+</body>
+</html>

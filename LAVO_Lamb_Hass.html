@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVOLAND - Avocados - Lamb Hass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(180deg, #56721D, #224e10);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .navbar .links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .navbar .links a:hover {
+      text-decoration: underline;
+      color: rgb(223, 227, 222);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('lavo_pic_2.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    /* Semi-transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 1;
+    }
+
+    /* Foreground card */
+    .hero-card {
+      background-color: #ffffff;
+      border: 2px solid rgb(86, 114, 29);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      margin: 20px;
+    }
+
+    .hero-card h1 {
+      color: rgb(86, 114, 29);
+      text-align: center;
+    }
+
+    .hero-card h2 {
+      color: rgb(110, 111, 107);
+      font-weight: normal;
+    }
+
+    /* Green label style */
+    .label-green {
+      color: rgb(86, 114, 29);
+      font-weight: bold;
+    }
+
+    .overview-center {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    /* Title Section */
+    .title {
+      font-size: 32px;
+      color: rgb(86, 114, 29);
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+      border-bottom: 2px solid rgb(86, 114, 29);
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LAVOLAND - Love of Avocados</div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="LAVO_Avocados.html">AVOCADOS</a>
+      <a href="LAVO_Farm.html">LAVOFARM</a>
+      <a href="LAVO_Equipment.html">EQUIPMENT</a>
+      <a href="LAVO_Contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="title"><strong>Lamb Hass</strong></div>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h1><strong>Description:</strong></h1>
+      <h2><i><span class="label-green">Size:</span></i> The Lamb Hass sizes from <strong>Medium</strong> to <strong>Large</strong></h2>
+      <h2><i><span class="label-green">Weight:</span></i> Can weigh between <strong>200-300 grams</strong></h2>
+      <h2><i><span class="label-green">Shape:</span></i> A distinctive <strong>Round</strong> shape</h2>
+      <h2><i><span class="label-green">Skin:</span></i> Unique <strong>Pebbly, Green to Purple-Black</strong> skin</h2>
+      <h2><i><span class="label-green">Flavor:</span></i> Beautiful <strong>Creamy</strong> Texture with a <strong>Rich, Nutty Flavor</strong></h2>
+      <h2><i><span class="label-green">Harvest Time:</span></i> Typically harvested from <strong>Late Summer </strong>to <strong>Fall</strong></h2>
+      <h2><i><span class="overview-center label-green">Overview:</span></i></h2>
+      <h2><strong>Creamy, nutty, and premium, Lamb Hass is valued for its rich taste and strong market appeal.</strong></h2>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVOLAND - Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(180deg, #56721D, #224e10);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 3;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .navbar .links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .navbar .links a:hover {
+      text-decoration: underline;
+      color: rgb(223, 227, 222);
+    }
+
+    /* Title Section */
+    .title {
+      font-size: 32px;
+      color: rgb(86, 114, 29);
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+      border-bottom: 2px solid rgb(86, 114, 29);
+      background-color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background-image: url('lavo_pic_egg.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    /* Semi-transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: 1;
+    }
+
+    /* Hero card container */
+    .hero-card {
+      background-color: #ffffff;
+      border: 2px solid rgb(86, 114, 29);
+      border-radius: 8px;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 2;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .hero-card h2 {
+      color: rgb(86, 114, 29);
+      margin: 0;
+    }
+
+    .hero-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.03);
+    }
+
+    /* Dropdown content */
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      margin-top: 15px;
+    }
+
+    .hero-card.open .card-content {
+      max-height: 1000px; /* enough space for images */
+    }
+
+    /* Image gallery */
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .image-row img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 2px solid rgb(86, 114, 29);
+    }
+
+    @media (max-width: 768px) {
+      .image-row img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">LAVOLAND - Love of Avocados</div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="LAVO_Avocados.html">AVOCADOS</a>
+      <a href="LAVO_Farm.html">LAVOFARM</a>
+      <a href="LAVO_Equipment.html">EQUIPMENT</a>
+      <a href="LAVO_Contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="title"><strong>LAVOFARM</strong></div>
+
+  <section class="hero">
+
+    <!-- LATEST NEWS CARD -->
+    <div class="hero-card" onclick="toggleCard(this)">
+      <h2><strong>LATEST NEWS</strong></h2>
+      <div class="card-content">
+        <p><i>~any info here~</i></p>
+        <div class="image-row">
+          <img src="news1.jpg" alt="News 1">
+          <img src="news2.jpg" alt="News 2">
+          <img src="news3.jpg" alt="News 3">
+        </div>
+      </div>
+    </div> <!-- ✅ properly closed -->
+
+    <!-- HORSES CARD -->
+    <div class="hero-card" onclick="toggleCard(this)">
+      <h2><strong>HORSES</strong></h2>
+      <div class="card-content">
+        <p><i>~any info here~</i></p>
+        <div class="image-row">
+          <img src="horse1.jpg" alt="Horse 1">
+          <img src="horse2.jpg" alt="Horse 2">
+          <img src="horse3.jpg" alt="Horse 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- SHEEP CARD -->
+    <div class="hero-card" onclick="toggleCard(this)">
+      <h2><strong>SHEEP</strong></h2>
+      <div class="card-content">
+        <p><i>~any info here~</i></p>
+        <div class="image-row">
+          <img src="sheep1.jpg" alt="Sheep 1">
+          <img src="sheep2.jpg" alt="Sheep 2">
+          <img src="sheep3.jpg" alt="Sheep 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- CHICKEN CARD -->
+    <div class="hero-card" onclick="toggleCard(this)">
+      <h2><strong>CHICKEN</strong></h2>
+      <div class="card-content">
+        <p><i>~any info here~</i></p>
+        <div class="image-row">
+          <img src="chicken1.jpg" alt="Chicken 1">
+          <img src="chicken2.jpg" alt="Chicken 2">
+          <img src="chicken3.jpg" alt="Chicken 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- GOATS CARD -->
+    <div class="hero-card" onclick="toggleCard(this)">
+      <h2><strong>GOATS</strong></h2>
+      <div class="card-content">
+        <p><i>~any info here~</i></p>
+        <div class="image-row">
+          <img src="goat1.jpg" alt="Goat 1">
+          <img src="goat2.jpg" alt="Goat 2">
+          <img src="goat3.jpg" alt="Goat 3">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
