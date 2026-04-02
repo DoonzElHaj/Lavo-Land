@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVOLAND - Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(180deg, #56721D, #224e10);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 3; /* stays above everything */
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .navbar .links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .navbar .links a:hover {
+      text-decoration: underline;
+      color: rgb(223, 227, 222);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;   /* center vertically */
+      align-items: center;       /* center horizontally */
+      background-image: url('lavo_pic_1.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    /* Semi-transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.6); /* nearly transparent white */
+      z-index: 1;
+    }
+
+    /* Heading is part of background layer */
+    .hero-heading {
+      font-size: 42px;
+      margin: 0;
+      color: rgb(86, 114, 29);
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      text-align: center;
+      z-index: 0;     /* behind overlay */
+    }
+
+    /* Foreground card */
+    .hero-card {
+      background-color: #ffffff;
+      border: 2px solid rgb(86, 114, 29);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 2;     /* above overlay */
+      margin: 20px;
+    }
+
+    .hero-card h1 {
+      color: rgb(110, 111, 107);
+    }
+
+    .hero-card h2 {
+      color: rgb(86, 114, 29);
+    }
+
+    .hero-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+    }
+
+    /* Title Section */
+    .title {
+      font-size: 32px;
+      color: rgb(86, 114, 29);
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+      border-bottom: 2px solid rgb(86, 114, 29);
+      background-color: #fff;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero-heading {
+        display: none; /* hide on mobile */
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-heading {
+        display: none; /* also hide on very small devices */
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LAVOLAND - Love of Avocados</div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="LAVO_Farm.html"> LAVOFARM</a>
+      <a href="LAVO_Contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="title"><strong>Home Page</strong></div>
+
+  <section class="hero">
+
+    <div class="hero-card">
+      <h2><strong>(example) Amount of Avocados Sold:</strong></h2>
+      <h1>(example value) 300,000 Avocados Sold in the Last Year</h1>
+    </div>
+
+    <div class="hero-card">
+      <h2><strong>_put any info here_</strong></h2>
+      <h1>_put any info here_</h1>
+    </div>
+  </section>
+</body>
+</html>
